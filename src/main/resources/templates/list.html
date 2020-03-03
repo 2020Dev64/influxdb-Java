@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooftop</title>
+</head>
+<body>
+<h1>Roof Gardening</h1>
+<table>
+    <tr>
+        <th>Value</th>
+        <th>Time</th>
+        <th>Sensor Name</th>
+    </tr>
+    <tr th:each="m : ${memoryPointList}">
+        <th th:text="${m.value}">123</th>
+        <th th:text="${m.totalTime}">123</th>
+        <th th:text="${m.name}">123</th>
+    </tr>
+</table>
+
+</body>
+</html>
