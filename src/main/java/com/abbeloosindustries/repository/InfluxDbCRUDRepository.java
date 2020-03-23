@@ -10,14 +10,13 @@ import java.util.List;
 
 @Repository
 public interface InfluxDbCRUDRepository {
-
-    // Make the interface reusable --> use constructor from the class implementing the interface
+    // TODO
+    // Put all the information in a file and read the data from this file
     String bucket = "Test";
-    String organization = "1724611cb04f2363";
-    String url = "https://eu-central-1-1.aws.cloud2.influxdata.com";
+    String organization = "organization";
+    String url = "the url";
     // Double test token
-    char[] token = "e9-en5SF1HkWu-uIIOU-L6L42a4TE96UK98qhTxaE3-Chsai9Nq-eiRNAk4WPnxHEMzlAqSD0m_tpd4PZk4BBg==".toCharArray();
-    //char[] token = "QBrxpfv5SG4mWWGiUIUgCFdrF5S339z3pruMzTjvo1Oc6Ygakd9HJXA4dZcRRhHGFtlImpUYInn9plzqAg2ylg==".toCharArray();
+    char[] token = "token here".toCharArray();
     // Make the connection final or use a method to create the connection ?
     InfluxDBClient client = InfluxDBClientFactory.create(url, token);
 
